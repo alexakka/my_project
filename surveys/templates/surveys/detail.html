@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>survey.survey_name</title>
+</head>
+<body>
+    {% if survey %}
+        {% for question in survey.question_set.all %}
+            <h2>{{ question }}</h2>
+            {% for choice in question.choice_set.all %}
+
+                    <input type="radio" id="radioButton">{{ choice }} <br>
+
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+</body>
+</html>

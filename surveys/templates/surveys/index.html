@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surveys</title>
+</head>
+<body>
+    {% if surveys %}
+        {% for survey in surveys %}
+             <a href="{% url 'detail' survey.id %}"><h1>{{ survey }}</h1></a>
+        {% endfor %}
+
+    {% endif %}
+</body>
+</html>
